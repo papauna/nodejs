@@ -102,13 +102,6 @@ npm install
 
 Buat fail `.env`
 
-```env
-PORT=3000
-
-MONGODB_URI=mongodb://localhost:27017/aduan_kpdn
-
-SESSION_SECRET=rahsia-yang-kuat
-```
 
 ### 4. Jalankan MongoDB
 
