@@ -1,0 +1,12 @@
+{
+  "changelists": [
+    {
+      "name": "Default",
+      "files": [
+        "views/partials/status.ejs",
+        ".vscode/changelists.json"
+      ]
+    }
+  ],
+  "active": "Default"
+}
