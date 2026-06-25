@@ -61,3 +61,27 @@
     </table>
   <% } %>
 </div>
+
+<!-- Tindakan terkini (guna populate untuk maklumat aduan berkaitan) — Hari 4 -->
+<div class="bg-white rounded-lg shadow mt-6">
+  <div class="px-4 py-3 border-b">
+    <h2 class="font-semibold">Tindakan Susulan Terkini</h2>
+  </div>
+  <% if (!tindakanTerkini || tindakanTerkini.length === 0) { %>
+    <p class="px-4 py-6 text-slate-500">Belum ada tindakan susulan direkod.</p>
+  <% } else { %>
+    <ul class="divide-y">
+      <% tindakanTerkini.forEach(function (t) { %>
+        <li class="px-4 py-3 text-sm">
+          <% if (t.aduan) { %>
+            <a href="/aduan/<%= t.aduan.id %>" class="font-mono text-blue-700 hover:underline"><%= t.aduan.noAduan %></a>
+            <span class="text-slate-400">·</span> <%= t.aduan.namaPengadu %>
+          <% } %>
+          <p class="text-slate-600 mt-1"><%= t.catatan %></p>
+          <p class="text-xs text-slate-400"><%= t.pegawai %> · <%= t.createdAt.toLocaleString('ms-MY') %></p>
+        </li>
+      <% }) %>
+    </ul>
+  <% } %>
+</div>
+

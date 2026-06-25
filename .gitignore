@@ -3,3 +3,7 @@ node_modules/
 npm-debug.log*
 .DS_Store
 *.log
+
+# Fail lampiran yang dimuat naik (jangan commit)
+public/uploads/*
+!public/uploads/.gitkeep

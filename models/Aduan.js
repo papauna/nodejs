@@ -71,6 +71,11 @@ const aduanSchema = new mongoose.Schema(
       enum: STATUS,
       default: 'Baru',
     },
+    // Senarai nama fail lampiran (bukti) yang dimuat naik. (Hari 4)
+lampiran: {
+  type: [String],
+  default: [],
+},
   },
   {
     // Tambah medan createdAt & updatedAt secara automatik.

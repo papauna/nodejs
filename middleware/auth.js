@@ -1,5 +1,4 @@
 const isLogin = (req, res, next) => {
-
   if (!req.session.user) {
     return res.redirect('/login');
   }
@@ -7,6 +6,15 @@ const isLogin = (req, res, next) => {
   next();
 };
 
+const isGuest = (req, res, next) => {
+  if (req.session.user) {
+    return res.redirect('/aduan');
+  }
+
+  next();
+};
+
 module.exports = {
-  isLogin
+  isLogin,
+  isGuest
 };
